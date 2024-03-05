@@ -25,7 +25,7 @@ jobs:
           git rm -rf .
 
           # Copy HTML and CSS files to the root of the gh-pages branch
-          cp -r $GITHUB_WORKSPACE/* .
+          cp -r $GITHUB_WORKSPACE/. .
 
           # Commit and push changes
           git add .
