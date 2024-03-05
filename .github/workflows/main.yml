@@ -16,7 +16,7 @@ jobs:
       - name: Deploy to GitHub Pages
         run: |
           git config user.name "Neeha2383"
-          git config user.email "Neehasri.kethireddy83@gmail.com"
+          git config user.email "your-email@example.com"
 
           # Create gh-pages branch if it doesn't exist
           git branch gh-pages || true
@@ -26,7 +26,7 @@ jobs:
           git rm -rf .
 
           # Copy HTML and CSS files to the root of the branch
-          cp -r $GITHUB_WORKSPACE/* .
+          cp -r . $GITHUB_WORKSPACE
 
           # Commit and push changes
           git add .
