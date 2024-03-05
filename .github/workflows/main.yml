@@ -15,11 +15,19 @@ jobs:
 
       - name: Deploy to GitHub Pages
         run: |
-          git config user.name "${{ github.actor }}"
-          git config user.email "${{ github.actor }}@users.noreply.github.com"
+          git config user.name "Neeha2383"
+          git config user.email "Neeha2383@users.noreply.github.com"
+          
+          # Ensure the gh-pages branch exists, or create it
           git checkout gh-pages || git checkout --orphan gh-pages
+          
+          # Remove all existing files
           git rm -rf .
+          
+          # Copy the contents from the main branch
           cp -r $GITHUB_WORKSPACE/* .
+
+          # Add, commit, and push changes
           git add .
           git commit -m "Deploy to GitHub Pages"
           git push --force "https://${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" gh-pages
