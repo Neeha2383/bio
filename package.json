@@ -1,0 +1,16 @@
+{
+    "name": "static-website",
+    "version": "1.0.0",
+    "description": "A description of your project",
+    "main": "index.html",
+    "scripts": {
+      "build": "echo 'No build process needed for a static site'"
+    },
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/Neeha2383/bio.git"
+    },
+    "author": "Neeha",
+    "devDependencies": {}
+  }
+  
